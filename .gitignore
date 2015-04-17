@@ -9,6 +9,12 @@
 *.swp
 *.swo
 
+# python 
+*.pyc
+
+# Debug files
+*.dSYM/
+
 # Compiled Object files
 *.slo
 *.lo
