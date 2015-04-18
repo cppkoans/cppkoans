@@ -22,5 +22,36 @@ int main() {
     }
     std::cout << i << std::endl;
 
+    // We can ommit providing a constant size to our array if we initialize
+    // it this way
+    int values[] {2, 3, 4}; // directly equivalent to int values[3] {2, 3, 4}
+
+    // size of array is number of bytes the array occupies, divided by the size
+    // of the first element in the array
+    std::cout << "There are " << sizeof(values)/sizeof(values[0])
+        << " elements in the array."
+        << std::endl;
+
+    std::cout << "Our values array takes up " << sizeof(values)
+        << " bytes"
+        << std::endl;
+
+    std::cout << "Each element takes up " << sizeof(values[0])
+        << " bytes"
+        << std::endl;
+
+    // summing elements in our array
+    int sum {};
+    const size_t array_size = sizeof(values) / sizeof(values[0]);
+    for (size_t i {}; i < array_size; ++i) {
+        sum += values[i];
+    }
+    std::cout << "The sum is " << sum << std::endl;
+
+    // Alternatively
+    sum = 0;
+    for (size_t i {}; i < array_size; sum += values[i++]);
+    std::cout << "The sum is " << sum << std::endl;
+
     return 0;
 };
