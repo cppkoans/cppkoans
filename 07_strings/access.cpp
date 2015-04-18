@@ -31,4 +31,24 @@ int main()
 
     std::cout << "Your input contained " << vowels << " vowels and "
               << consonants << " consonants." << std::endl;
+
+    vowels = 0;
+    consonants = 0;
+    // we can use a range-based for-loop too
+    for (const auto& ch: text) {
+        if (isalpha(ch)) {
+            switch (tolower(ch)) {
+                case 'a': case 'e': case 'i': case 'o': case 'u':
+                    ++vowels;
+                    break;
+
+                default:
+                    ++consonants;
+                    break;
+            }
+        }
+    }
+
+    std::cout << "Your input contained " << vowels << " vowels and "
+              << consonants << " consonants." << std::endl;
 }
