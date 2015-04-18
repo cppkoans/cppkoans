@@ -32,3 +32,8 @@ or
 `double temperatures[6] {}`
 
 Everything will be `0.0` in this case.
+
+## Loops
+
+### for loops
+
