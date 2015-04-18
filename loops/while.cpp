@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <iomanip>
 
@@ -10,14 +9,17 @@ int main()
     std::cout << "What upper limit for n would you like? ";
     std::cin >> limit;
 
-    // column headings
+    // Column headings
     std::cout << std::setw(8) << "integer"
               << std::setw(8) << " sum"
-              << std::setw(20) << " factorial"
+              << std::setw(8) << " factorial"
               << std::endl;
 
-    for (unsigned long long n {1ULL}, sum {}, factorial {1ULL}; n <= limit; ++n)
-    {
+    unsigned int n {};
+    unsigned int sum {};
+    unsigned long long factorial {1ULL};
+
+    while (++n <= limit) {
         sum += n;
         factorial *= n;
         std::cout << std::setw(8) << n
