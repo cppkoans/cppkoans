@@ -51,4 +51,10 @@ int main()
 
     std::cout << "Your input contained " << vowels << " vowels and "
               << consonants << " consonants." << std::endl;
+
+    // We can access substrings from a string object using the `substr()` function as well
+    string phrase {"The higher the fewer."};
+    string word1 {phrase.substr(4, 6)};
+
+    std::cout << word1 << std::endl;
 }
