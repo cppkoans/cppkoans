@@ -24,5 +24,11 @@ int main()
     string phrase {proverb, 7, 6};
     std::cout << "Substring truncated literal is: " << phrase << std::endl;
 
+    // assignments
+    string adjective {"hornswoggling"};
+    string word {"rubbish"};
+    word = adjective;
+    adjective = "twotiming";
+
     return 0;
 }
