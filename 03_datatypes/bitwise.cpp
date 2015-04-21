@@ -18,5 +18,9 @@ int main()
     std::cout << result1 << std::endl;   // 12
     std::cout << result2 << std::endl;   // 4096
 
+    // This mutates `number` directly
+    std::cout << (number <<= 2) << std::endl;
+    std::cout << number << std::endl;
+
     return 0;
 }
