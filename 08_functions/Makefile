@@ -3,7 +3,7 @@ CXX=clang++
 CXXFLAGS=-std=c++11
 RM=rm -f
 CPPFLAGS=-g
-TARGETS=function
+TARGETS=function functionprototype
 
 all: $(TARGETS)
 
