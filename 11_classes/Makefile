@@ -5,7 +5,7 @@ CXXFLAGS=-std=c++11 -g -I.
 #DEPS=compare.h
 OBJ=box.o
 
-TARGETS=constructor constructoroutside constructorinitlist explicit delegating accessprivatemembers
+TARGETS=constructor constructoroutside constructorinitlist explicit delegating accessprivatemembers arraysofobjects
 
 RM=rm -f
 
