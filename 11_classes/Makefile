@@ -5,7 +5,7 @@ CXXFLAGS=-std=c++11 -g -I.
 #DEPS=compare.h
 OBJ=box.o
 
-TARGETS=constructor constructoroutside
+TARGETS=constructor constructoroutside constructorinitlist
 
 RM=rm -f
 
