@@ -5,7 +5,7 @@ CXXFLAGS=-std=c++11 -g -I.
 #DEPS=compare.h
 OBJ=box.o
 
-TARGETS=constructor
+TARGETS=constructor constructoroutside
 
 RM=rm -f
 
@@ -19,9 +19,7 @@ RM=rm -f
 box: $(OBJ)
 	$(CXX) -o $@ $^ $(CXXFLAGS)
 
-constructor: $(TARGETS)
-
-TARGETS=constructor
+all: $(TARGETS)
 
 clean:
 	$(RM) $(OBJ) $(TARGETS)
