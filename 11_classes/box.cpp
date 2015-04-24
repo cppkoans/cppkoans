@@ -8,7 +8,8 @@ Box::Box(double lv, double wv, double hv) : length(lv), width(wv), height(hv)
 
 double Box::volume()
 {
-    return length * width * height;
+    //return length * width * height;
+    return this->length * this->width * this->height;
 }
 
 double surfaceArea(const Box& aBox)
