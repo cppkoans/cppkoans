@@ -16,3 +16,21 @@ double surfaceArea(const Box& aBox)
 {
     return 2.0 * (aBox.length * aBox.width + aBox.length * aBox.height + aBox.height * aBox.width);
 }
+
+Box* Box::setLength(double lv)
+{
+    if (lv > 0) length = lv;
+    return this;
+}
+
+Box* Box::setWidth(double wv)
+{
+    if (wv > 0) width = wv;
+    return this;
+}
+
+Box* Box::setHeight(double hv)
+{
+    if (hv > 0) height = hv;
+    return this;
+}

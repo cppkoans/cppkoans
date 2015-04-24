@@ -11,4 +11,9 @@ public:
     double volume();
 
     friend double surfaceArea(const Box& aBox);
+
+    // Mutator functions that return `this`
+    Box* setLength(double lv);
+    Box* setWidth(double wv);
+    Box* setHeight(double hv);
 };
