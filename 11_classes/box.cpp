@@ -1,21 +1,17 @@
 #include <iostream>
+#include "Box.h"
 
-class Box
+Box::Box(double lv, double wv, double hv) : length(lv), width(wv), height(hv)
 {
-private:
-    double length {1.0};
-    double width {1.0};
-    double height {1.0};
+    std::cout << "Box constructor called." << std::endl;
+}
 
-public:
-    double volume()
-    {
-        return length * width * height;
-    }
-};
-
-int main()
+double Box::volume()
 {
-    Box myBox;
-    std::cout << "Volume of myBox is " << myBox.volume() << std::endl;
+    return length * width * height;
+}
+
+double surfaceArea(const Box& aBox)
+{
+    return 2.0 * (aBox.length * aBox.width + aBox.length * aBox.height + aBox.height * aBox.width);
 }
