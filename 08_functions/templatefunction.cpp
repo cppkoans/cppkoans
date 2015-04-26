@@ -6,6 +6,13 @@
 
 template <typename T> T larger(T a, T b);   // function template prototype
 
+// This fixes the dangerous memory address comparison error by specializing
+// our function template when dealing with pointer comparisons
+template <> long* larger<long*>(long* a, long* b)
+{
+    return *a > *b ? a : b;
+}
+
 int main()
 {
     // Using our template function, we can generate functions which handles
@@ -17,7 +24,7 @@ int main()
     int c = 1, d = 2;
     std::cout << "Larger of " << c << " and " << d << " is " << larger(c, d) << std::endl;
 
-    long e = 9L, f = 8L;
+    long e {8L}, f {9L};
     std::cout << "Larger of " << e << " and " << f << " is " << larger(e, f) << std::endl;
 
     // To handle arguments of different types, we have to explicitly cast the type-to-use
@@ -35,6 +42,11 @@ int main()
                                                                               //template <typename T> T larger(T a, T b);   // function template prototype
                                                                                             //^
                                                                                                 //1 error generated.
+
+    // function template specialization
+    // This is wrong if we don't do template specialization because
+    // it will compare memory address!!!
+    std::cout << "Larger of " << e << " and " << f << " is " << *larger(&e, &f) << std::endl;
 
     return 0;
 }
