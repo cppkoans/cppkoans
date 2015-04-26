@@ -7,6 +7,7 @@
 * passing an array argument
 * passing an array pointer
 * arguments to main()
+* default arguments
 * function template
 * function overloading
 * function template non-type
