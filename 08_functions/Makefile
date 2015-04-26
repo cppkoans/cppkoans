@@ -3,7 +3,7 @@ CXX=clang++
 CXXFLAGS=-std=c++11
 RM=rm -f
 CPPFLAGS=-g
-TARGETS=function functionprototype passbyvalue passbypointer passarray passarraypointer templatefunction
+TARGETS=function functionprototype passbyvalue passbypointer passarray passarraypointer functiontemplate functionoverload
 
 all: $(TARGETS)
 
