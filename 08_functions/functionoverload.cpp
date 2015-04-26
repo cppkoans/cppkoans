@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <string>
 
 template <typename T> T larger(T a, T b);   // function template prototype
 
@@ -8,6 +9,10 @@ long* larger(long* a, long* b);
 
 // function template overloading with function template
 template <typename T> T larger(const std::vector<T>& data);
+
+// function template overloading
+// using function template with multiple parameters
+template <typename TReturn, typename TArg> TReturn larger(TArg a, TArg b);
 
 int main()
 {
@@ -27,6 +32,13 @@ int main()
 
     std::vector<unsigned int> values { 2u, 3u, 5u, 7u, 11u, 13u, 17u, 19u, 6u };
     std::cout << "Largest element is " << larger(values) << std::endl;
+
+    // compiler creates function that accepts arguments of type double
+    // and returns a result of type double
+    std::cout << "Larger of 1.5 and 2.5 is " << larger<double, double>(1.5, 2.5) << std::endl;
+
+    double ans = larger<double, int>(5, 25);
+    std::cout << "Larger of 5 and 25 is " << ans << std::endl;
 
     return 0;
 }
@@ -55,4 +67,10 @@ T larger(const std::vector<T>& data)
         if (value > result) result = value;
 
         return result;
+}
+
+template <typename TReturn, typename TArg>
+TReturn larger(TArg a, TArg b)
+{
+    return a > b ? a : b;
 }
