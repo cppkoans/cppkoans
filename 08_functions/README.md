@@ -6,6 +6,7 @@
 * pass by pointer
 * passing an array argument
 * passing an array pointer
+* arguments to main()
 * function template
 * function overloading
 * function template non-type
