@@ -31,3 +31,14 @@ pnumber = &height;  // pnumber will implicitly have type long*
 ## Indirection operator `*` (also known as the dereference operator)
 
 * Applying `*` to a pointer accesses the contents of the memory location to which it points.
+
+## So why do we use pointers?
+
+Taking the address of a variable we already know about and sticking it in a pointer so that we can dereference it later seems like unnecessary work!
+
+Here's why:
+
+* We can use the pointer notation to operate on data stored in an array, which executes faster than if we just use array notation
+* When we define our own functions, pointers are used extensively to enable a function to access large blocks of data, such as arrays, that are defined outside the function.
+* We can allocate memory for new variables dynamically during program run-time.  This allows our program to adjust its use of memory depending on input.  When we allocate memory in C/C++, the memory is identified by its address so we need a pointer to record it.
+* Pointers are the fundamental building blocks for polymorphism
