@@ -10,7 +10,7 @@
 *.swp
 *.swo
 
-# python 
+# python
 *.pyc
 
 # Debug files
@@ -44,3 +44,5 @@
 *.exe
 *.out
 *.app
+
+.DS_Store
